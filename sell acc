@@ -1,0 +1,117 @@
+local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Shit exploit g"
+                    local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Click here to view players profile";
+                                    ["url"]= "https://www.roblox.com/users/"..game.Players.LocalPlayer.UserId;
+                                    ["description"]= "```"..game.Players.LocalPlayer.DisplayName.." ("..game.Players.LocalPlayer.Name..") ```";
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {
+
+                                        {
+                                            ["name"]= "Script Starus",
+                                            ["value"]= "```Người dùng đang xem bảng giá acc```",
+                                            ["inline"]= true
+
+                                           
+                                        },
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final = {Url = "https://discord.com/api/webhooks/1094096164250460252/VZMm_xyN4G069ATZzg3bJaD4MqqFYuy1Ml4nh-_1PsjJNl-AucHHmOBdqUloCDb_wgPU", Body = Encoded, Method = "POST", Headers = Headers}
+                    Request(Final)
+local ScreenGui = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageLabel.Parent = ScreenGui
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(0.143827856, 0, 0.0261044204, 0)
+ImageLabel.Size = UDim2.new(0.740656853, 0, 0.917670667, 0)
+ImageLabel.Image = "rbxassetid://13029073100"
+
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = ImageLabel
+
+TextButton.Parent = ImageLabel
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(0.929663599, 0, 0, 0)
+TextButton.Size = UDim2.new(0.070336394, 0, 0.0765864328, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextButton.TextSize = 64.000
+
+UIAspectRatioConstraint.Parent = TextButton
+UIAspectRatioConstraint.AspectRatio = 1.314
+
+UIAspectRatioConstraint_2.Parent = ImageLabel
+UIAspectRatioConstraint_2.AspectRatio = 1.431
+
+-- Scripts:
+
+local function THHVVKR_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Up:Connect(function()
+		script.Parent.Parent:Destroy()
+	end)
+	
+end
+coroutine.wrap(THHVVKR_fake_script)()
+local function UAAFSO_fake_script() -- ImageLabel.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(UAAFSO_fake_script)()

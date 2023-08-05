@@ -1,0 +1,290 @@
+--sec:Button("Button", function()
+  --SolarisLib:Notification("Test", "This is a notification test.")
+--end)
+
+--sec:Toggle(title <string>,default <boolean>, flag <string>, callback <function>)
+--local toggle = sec:Toggle("Toggle", false,"Toggle", function(t)
+  --print(t)
+--end)
+
+--[[
+toggle:Set(state <boolean>)
+]]
+
+--sec:Slider(title <string>,default <number>,max <number>,minimum <number>,increment <number>, flag <string>, callback <function>)
+--local slider = sec:Slider("Slider", 0,25,0,2.5,"Slider", function(t)
+  --print(t)
+--end)
+
+--[[
+slider:Set(state <number>)
+]]
+
+--sec:Dropdown(title <string>,options <table>,default <string>, flag <string>, callback <function>)
+--local dropdown = sec:Dropdown("Dropdown", {"a","b","c","d","e"},"","Dropdown", function(t)
+ -- print(t)
+--end)
+
+--[[
+Dropdown:Refresh(options <table>, deletecurrent <boolean>)
+Dropdown:Set(option <string>)
+]]
+
+--sec:MultiDropdown(title <string>,options <table>,default <table>, flag <string>, callback <function>)
+--local multidropdown =sec:MultiDropdown("Multi Dropdown", {"a","b","c","d","e"},{"b", "c"},"Dropdown", function(t)
+ -- print(table.concat(t, ", "))
+--end)
+
+--[[
+Dropdown:Refresh(options <table>, deletecurrent <boolean>)
+Dropdown:Set(option <table>)
+]]
+
+--sec:Colorpicker(title <string>, default <color3>, flag <string>, callback <function>)
+--sec:Colorpicker("Colorpicker", Color3.fromRGB(255,255,255),"Colorpicker", function(t)
+ -- print(t)
+--end)
+
+--sec:Textbox(title <string> ,disappear <boolean>, callback <function>)
+--sec:Textbox("Textbox", true, function(t)
+--  print(t)
+--end)
+
+--sec:Bind(title <string>, default <keycode>, hold <boolean>, flag <string>, callback <function>)
+--sec:Bind("Hold Bind", Enum.KeyCode.E, true, "BindHold", function(t)
+ -- print(t)
+--end)
+
+--sec:Bind("Normal Bind", Enum.KeyCode.F, false, "BindNormal", function()
+  --print("Bind pressed")
+--end)
+
+--[[
+bind:Set(state <keycode>)
+]]
+
+--sec:Label(text <string>)
+--local label = sec:Label("Label")
+
+--[[
+label:Set(text <string>)
+]]
+--local tab2 = win:Tab("Tab 2")
+-- Gui to Lua
+-- Version: 3.5
+
+-- Instances:
+
+-- Gui to Lua
+-- Version: 3.5
+
+-- Instances:
+
+
+
+ function two(gotoCFrame) --- Tween
+      pcall(function()
+          game.Players.LocalPlayer.Character.Humanoid.Sit = false
+          game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+      end)
+      if (game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position - gotoCFrame.Position).Magnitude <= 200 then
+          pcall(function() 
+              tweenz:Cancel()
+          end)
+          game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.CFrame = gotoCFrame
+      else
+          local tween_s = game:service"TweenService"
+          local info = TweenInfo.new((game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position - gotoCFrame.Position).Magnitude/325, Enum.EasingStyle.Linear)
+           tween, err = pcall(function()
+              tweenz = tween_s:Create(game.Players.LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = gotoCFrame})
+              tweenz:Play()
+          end)
+          if not tween then return err end
+      end
+      function _TweenCanCle()
+          tweenz:Cancel()
+      end
+  
+end
+if game.PlaceId == 2753915549 then
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.Text = "Min Gaming ( Sea 1 )"
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.TextColor3 = Color3.fromRGB(137, 255, 101)
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.TextSize = (19.000)
+end
+
+
+if game.PlaceId == 4442272183 then
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.Text = "Min Gaming ( Sea 2 )"
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.TextColor3 = Color3.fromRGB(137, 255, 101)
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.TextSize = (19.000)
+end
+
+
+if game.PlaceId == 7449423635 then
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.Text = "Min Gaming ( Sea 3 )"
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.TextColor3 = Color3.fromRGB(137, 255, 101)
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.TextSize = (19.000)
+end
+
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local UIStroke = Instance.new("UIStroke")
+local UIGradient = Instance.new("UIGradient")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.Position = UDim2.new(0.111237228, 0, 0.151923075, 0)
+ImageButton.Size = UDim2.new(0, 71,0, 71)
+ImageButton.Image = "rbxassetid://13684510936"
+
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = ImageButton
+
+UIAspectRatioConstraint.Parent = ImageButton
+
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Thickness = 4
+UIStroke.Parent = ImageButton
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(85, 255, 255)), ColorSequenceKeypoint.new(0.16, Color3.fromRGB(179, 226, 255)), ColorSequenceKeypoint.new(0.30, Color3.fromRGB(219, 255, 58)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 246, 152)), ColorSequenceKeypoint.new(0.66, Color3.fromRGB(227, 255, 103)), ColorSequenceKeypoint.new(0.85, Color3.fromRGB(102, 255, 140)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(119, 255, 210))}
+UIGradient.Parent = UIStroke
+
+-- Scripts:
+
+local function XQKX_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("VirtualInputManager"):SendKeyEvent(true, "RightControl" , false , game)
+	end)
+end
+coroutine.wrap(XQKX_fake_script)()
+local function LVGT_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(LVGT_fake_script)()
+local function BNUOMOB_fake_script() -- UIGradient.LocalScript 
+	local script = Instance.new('LocalScript', UIGradient)
+
+	local TweenService = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
+	local tween = TweenService:Create(script.Parent, tweeninfo, {Rotation = 360})
+	tween:Play()
+end
+coroutine.wrap(BNUOMOB_fake_script)()
+
+
+
+local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/sol"))()
+
+--[[SolarisLib:New({
+  Name - Title of the UI <string>
+  FolderToSave - Name of the folder where the UI files will be stored <string>
+})]]
+local win = SolarisLib:New({
+  Name = "Min Gaming",
+  FolderToSave = "SolarisLibStuff"
+})
+
+--win:Tab(title <string>)
+local tab = win:Tab("Blox Fruit")
+
+--tab:Section(title <string>)
+local sec = tab:Section("Script Blox Fruit")
+sec:Button("Fiend1sh Hub", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Fiend1sh/FiendMain/main/BululukMain"))()
+  SolarisLib:Notification("Test", "This is a notification test.")
+end)
+local sec = tab:Section("Script Lụm Fruit")
+sec:Button("lụm fruit", function()
+loadstring(game:HttpGet('https://paste.xyzo.space/rblxhub/bloxfruits/ff.lua'))()
+ SolarisLib:Notification("Test", "This is a notification test.")
+end)
+local sec = tab:Section("Script nhặt chest")
+sec:Button("auto chest", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Fiend1sh/FiendMain/main/BululukMain"))()
+  SolarisLib:Notification("Test", "This is a notification test.")
+end)
+
+
+local tab = win:Tab("RaceV4")
+local sec = tab:Section("support ups v4")
+sec:Button("teleport to the fish gate", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.3555, 14896.5352, 102.624695, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+    two(CFrame.new(28223.9746, 14890.6338, -211.404022, -0.263963521, -6.30879171e-08, 0.964532673, -4.29495977e-08, 1, 5.36537463e-08, -0.964532673, -2.7263658e-08, -0.263963521))
+end)
+
+sec:Button("teleport to rabbit gate", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.3555, 14896.5352, 102.624695, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+    two(CFrame.new(29020.4277, 14890.6328, -378.330383, 0.990481138, -7.46895665e-08, -0.137648329, 6.20387155e-08, 1, -9.61971978e-08, 0.137648329, 8.67419843e-08, 0.990481138))
+end)
+
+sec:Button("teleport to Human gate", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.3555, 14896.5352, 102.624695, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+two(CFrame.new(29237.3965, 14891.7373, -202.29657, 0.314430177, -1.06308867e-07, -0.94928062, 5.46941301e-08, 1, -9.38725435e-08, 0.94928062, -2.24037162e-08, 0.314430177))
+loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
+end)
+
+
+
+sec:Button("teleport to angel gate", function()
+print("Clicked")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.3555, 14896.5352, 102.624695, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+two(CFrame.new(28962.1758, 14919.2812, 236.689529, 0.0245016906, -1.02372431e-08, -0.999699771, 6.26366514e-08, 1, -8.70515215e-09, 0.999699771, -6.24045597e-08, 0.0245016906))
+    end)
+
+sec:Button("teleport to devil gate", function()
+print("Clicked")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.3555, 14896.5352, 102.624695, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+   two(CFrame.new(28666.498, 14890.335, 453.693146, -0.701418459, -6.73539589e-08, 0.71274972, -1.05283206e-07, 1, -9.110666e-09, -0.71274972, -8.14309615e-08, -0.701418459))
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
+   end)
+   
+sec:Button("teleport to robot gate", function()
+print("Clicked")
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.3555, 14896.5352, 102.624695, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+    two(CFrame.new(28492.0957, 14895.6328, -421.79657, -0.196106553, -2.49572771e-08, 0.980582595, 1.00235162e-07, 1, 4.54974938e-08, -0.980582595, 1.07211207e-07, -0.196106553))
+    end)

@@ -1,0 +1,332 @@
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local UIGradient = Instance.new("UIGradient")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.Position = UDim2.new(0.154057801, 0, 0.228764698, 0)
+ImageButton.Size = UDim2.new(0, 57, 0, 52)
+ImageButton.Image = "rbxassetid://11991152983"
+
+UICorner.Parent = ImageButton
+
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Thickness = 3
+UIStroke.Parent = ImageButton
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(0.13, Color3.fromRGB(255, 93, 255)), ColorSequenceKeypoint.new(0.28, Color3.fromRGB(92, 95, 255)), ColorSequenceKeypoint.new(0.44, Color3.fromRGB(74, 255, 240)), ColorSequenceKeypoint.new(0.61, Color3.fromRGB(152, 255, 96)), ColorSequenceKeypoint.new(0.78, Color3.fromRGB(239, 255, 62)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 90, 78))}
+UIGradient.Parent = UIStroke
+
+-- Scripts:
+
+local function VVOJSC_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	ImageButton.MouseButton1Down:Connect(function()
+		game:GetService("VirtualInputManager"):SendKeyEvent(true, "RightAlt" , false , game)
+	end)
+end
+coroutine.wrap(VVOJSC_fake_script)()
+local function DCLSA_fake_script() -- UIGradient.LocalScript 
+	local script = Instance.new('LocalScript', UIGradient)
+
+	
+	local TweenService = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
+	local tween = TweenService:Create(script.Parent, tweeninfo, {Rotation = 360})
+	tween:Play()
+	
+end
+coroutine.wrap(DCLSA_fake_script)()
+
+
+local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/XwwTN7w6"))()
+local Window = Library.CreateLib("Nguyễn An", "BloodTheme")
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+    Title = "Nguyễn An";
+    Text = "Nhận cày Thuê Shindo + blox";
+    Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
+    Duration = 5; 
+ 
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+    Title = "Nguyễn An";
+    Text = "https://www.facebook.com/nguyenanutgr";
+    Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
+    Duration = 5; 
+ 
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+    Title = "Nguyễn An";
+    Text = "Mua game pass đê ae";
+    Button1 = "Ok";
+    Button2 = "đéo";
+    Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
+    Duration = 5;
+--test
+local Tab = Window:NewTab("Blox Fruit")
+local Section = Tab:NewSection("Blox Fruit")
+Section:NewButton("MuKuRo v1 : Pc (Bản Ngon Nhất Pc )", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/DonateMe/main/OldBf"))()
+end)
+Section:NewButton("Zaque Hub : Pc và Pe (Bản Máy yếu )", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Mei2232/ZaqueHub/main/Zaque%20Hub"))()
+end)
+ 
+Section:NewButton("NEVA HUB : Pc và Pe", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
+end)
+ 
+Section:NewButton("Hoho hub : Pc và Pe", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+end)
+Section:NewButton("Evo X Hub : Pc và Pe", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/2"))()
+end)
+Section:NewButton("Auto Chest : Pc và Pe", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/bloxfruit/main/autochest'))()
+end)
+Section:NewButton("Fix Lag : Pc và Pe", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet('https://pastebin.com/raw/wQsPJ554'))()
+end)
+Section:NewButton("Show acc ", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://pastebin.com/raw/zcFd20tT"))()
+end)
+--shindo
+local Tab = Window:NewTab("Shindo Life")
+local Section = Tab:NewSection("Nguyễn An")
+Section:NewButton("V.G Hub", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+end)
+Section:NewButton("Premier lite Mobile 1", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SxnwDev/Premier/main/Free-Premier.lua", true))()
+end)
+
+Section:NewButton("Platinium : Pc và Pe (vip)", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Platinium/main/Loader"))()
+end)
+
+Section:NewButton("Muhamma Mobile 2", "Nguyễn An", function()
+    print("Clicked")
+getgenv().key = "projectWBIsAwesomemrcrapcrappypattt"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Main.lua"))()
+end)
+Section:NewButton("Paid Vip K Bán : Bản 1", "Nguyễn An", function()
+    print("Clicked")
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Nguyễn An : Sau Khi Bật hack vui lòng đợi 30 giây ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+OrionLib:MakeNotification({
+	Name = "Nguyễn An ",
+	Content = "Sao Lại Vô Đây , Mua Key Chưa ?",
+	Image = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
+	Time = 5
+}) 
+ 
+_G.Key = "hokbeoi"
+_G.KeyInput = "string"
+ 
+function MakeScriptHub()
+    _G.wl_key = '2718e31e679c23944b8c7ce0a3fd988eb2d6d0fe'
+loadstring(game:HttpGet('https://keshhub.xyz/.earlyaccess', true))()
+end
+ 
+function CorrectKeyNotification()
+    OrionLib:MakeNotification({
+        Name = "Nguyễn AN",
+        Content = "Mã key k đc chia sẻ ko tao xiên mày",
+        Image = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
+        Time = 5
+    })
+wait(5)
+    OrionLib:Destroy()
+end
+function InCorrectKeyNotification()
+    OrionLib:MakeNotification({
+        Name = "Nguyễn An",
+        Content = "mày chưa mua key mà đòi xài hack",
+        Image = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
+        Time = 5
+    })
+end
+ 
+local Tab = Window:MakeTab({
+	Name = "Nguyễn An",
+	Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
+	PremiumOnly = false
+})
+Tab:AddTextbox({
+	Name = "Nhập Key Vô Rồi Bấm Dòng Bên Dưới Bản 1  ↓ ↓ ↓",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInput = Value
+InCorrectKeyNotification()
+	end	  
+})
+Tab:AddButton({
+	Name = "sau khi nhập key bấm vô đây",
+	Callback = function()
+      		if _G.KeyInput == _G.Key then
+            MakeScriptHub()
+            CorrectKeyNotification()
+            end
+  	end    
+})
+ 
+ 
+end)
+Section:NewButton("Paid Vip K Bán : Bản 2", "Nguyễn An", function()
+    print("Clicked")
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Nguyễn An : Sau Khi Bật hack vui lòng đợi 30 giây ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+OrionLib:MakeNotification({
+	Name = "Nguyễn An ",
+	Content = "Sao Lại Vô Đây , Mua Key Chưa ?",
+	Image = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
+	Time = 5
+}) 
+ 
+_G.Key = "hokbeoi"
+_G.KeyInput = "string"
+ 
+function MakeScriptHub()
+    _G.wl_key = '42cedb5f55b51579fb13e13cb34f73b957651298'
+loadstring(game:HttpGet('https://keshhub.xyz/.earlyaccess', true))()
+end
+ 
+function CorrectKeyNotification()
+    OrionLib:MakeNotification({
+        Name = "Nguyễn AN",
+        Content = "Mã key k đc chia sẻ ko tao xiên mày",
+        Image = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
+        Time = 5
+    })
+wait(5)
+    OrionLib:Destroy()
+end
+function InCorrectKeyNotification()
+    OrionLib:MakeNotification({
+        Name = "Nguyễn An",
+        Content = "mày chưa mua key mà đòi xài hack",
+        Image = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
+        Time = 5
+    })
+end
+ 
+local Tab = Window:MakeTab({
+	Name = "Nguyễn An",
+	Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150",
+	PremiumOnly = false
+})
+Tab:AddTextbox({
+	Name = "Nhập Key Vô Rồi Bấm Dòng Bên Dưới Bản 2 ↓ ↓ ↓",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInput = Value
+InCorrectKeyNotification()
+	end	  
+})
+Tab:AddButton({
+	Name = "sau khi nhập key bấm vô đây",
+	Callback = function()
+      		if _G.KeyInput == _G.Key then
+            MakeScriptHub()
+            CorrectKeyNotification()
+            end
+  	end    
+})
+ 
+ 
+end)
+local Tab = Window:NewTab("One Piece Legendary")
+local Section = Tab:NewSection("Nhìn cc quen k mà nhìn =))")
+Section:NewButton("Right Hub", ":3", function()
+    print("Clicked")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Urr1233/One-Piece-Legendary-Urr124/main/README.md"))()
+end)
+
+Section:NewButton("Tên cc j éo bt", ":3", function()
+    print("Clicked")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/omokom55/FreeScripts/main/One%20Piece%3A%20Legendary", true))()
+    end)
+Section:NewButton("Hack xịn MID Hub", ":3", function()
+    print("Clicked")
+    loadstring(game:HttpGet("https://pastebin.com/raw/Fxabbfm2"))()
+    end)
+--all game 
+local Tab = Window:NewTab("ALL GAME")
+local Section = Tab:NewSection("ALL GAME")
+Section:NewButton("All Game 1 : Pc và Pe ( Ngon )", "AN DZ ", function()
+    print("Clicked")
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/raw-scriptpastebin/raw/main/B_Genesis'))()
+end)
+Section:NewButton("All Game 2 : Pc và Pe ( Ngon ) ", "AN DZ ", function()
+    print("Clicked")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
+end)
+--other
+local Tab = Window:NewTab("Hack Khác")
+local Section = Tab:NewSection("hack khác")
+Section:NewButton("bay", "nó chỉ bay dc thui :3", function()
+    print("Clicked")
+    loadstring(game:HttpGet('https://pastebin.com/raw/xReqHmww'))()
+end)
+Section:NewSlider("chạy nhanh", "từ 1 đến 500 max speed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section:NewSlider("nhảy cao", "từ 1 đến 500 max nhảy cao", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+Section:NewToggle("Bật tắt chạy nhanh", "Bật để chạy nhanh nhảy cao tắt để trở lại bình thường", function(state)
+    if state then
+        print("Toggle On")
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+    else
+        print("Toggle Off")
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+Section:NewKeybind("ẩn hiện cho PC", "lỗi gì tự chỉnh nút nào đó trên bàn phím", Enum.KeyCode.RightAlt, function()
+	Library:ToggleUI()
+end)
+Section:NewButton("hack truy cập file game", "chỉnh sửa ít thôi ko là bay acc", function()
+    loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))()
+end)
+--credit
+local Tab = Window:NewTab("Game Pass Giá Rẻ")
+local Section = Tab:NewSection("Link Mua Game Pass Gía Rẻ ↓↓↓ ")
+Section:NewButton("Facebook Nguyễn An ", "bấm vào để copy", function()
+    setclipboard("https://www.facebook.com/nguyenanutgr/")
+notifLib:CreateDefaultNotif({
+ TweenSpeed = 0.5,
+ Title = "Nguyễn An ",
+ Text = "Đã Sao Chép Link Facebook",
+ Duration = 5
+})
+Instance.new("Sound", game:GetService("SoundService")).SoundId = "rbxassetid://1788243907"; game:GetService("SoundService").Sound:Play()
+end)
+local Section = Tab:NewSection("Giá Robux 120h ↓↓↓ ")
+Section:NewDropdown("Giá Robux 120h", "Mua Rb", {"10k Tsr = 127 Rb", "10k Card = 107 Rb", "Có Bán Acc Blox Ae Mua Ib"}, function(currentOption)
+    print(currentOption)
+end)
